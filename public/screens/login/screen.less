@@ -1,0 +1,199 @@
+    //out: screen.css
+    @import '../../css/index.less';
+    .loginScreen {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        background: @white; 
+        left: 100%;
+        font-family: sans-serif;
+        .defaultHeader {
+            position: absolute;
+            top: 0;
+            height: 7rem;
+            width: 100%;
+            background: #222e40;
+            .logo {
+                position: absolute;
+                height: 3rem;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .loginContainer {
+            position: absolute;
+            height: 35rem;
+            width: 55rem;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid lightgray;
+            border-radius: .4rem;
+            padding: 4rem;
+            box-sizing: border-box;
+            .header {
+                position: relative;
+                height: 8rem;
+                width: 100%;
+                .logo {
+                    position: absolute;
+                    height: 4rem;
+                    top: 1rem;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+            }
+            .value {
+                position: relative;
+                float: left;
+                width: 100%;
+                margin: 1rem 0 0 0;
+                border-radius: .4rem;
+                border: 1px solid lightgray;
+                height: 4rem;
+                box-sizing: border-box;
+                padding: 0 0 0 1rem;
+                color: #222e40;
+                font-weight: 300;
+                font-size: 1.8rem;
+                &.email {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                &.password {
+                    margin: 0 0 0 0;
+                    border-top: none;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+            }
+            .value ::-webkit-input-placeholder {
+                font-size: @h2;
+            }
+            .btnLogin {
+                position: relative;
+                float: left;
+                margin: 1.5rem 0 0 0;
+                width: 100%;
+                text-align: center;
+                line-height: 4rem;
+                height: 4rem;
+                color: white;
+                font-weight: 600;
+                background: #2996cc;
+                text-transform: capitalize;
+                border-radius: .4rem
+            }
+        }
+        .info {
+            position: absolute;
+            top: 27rem;
+            bottom: 0;
+            text-align: center;
+            line-height: 7rem;
+            color: #58595b;
+            left: 0;
+            right: 0;
+            .btnSignup {
+                color: #2996cc;
+                font-weight: 600;
+                margin-left: 1rem;
+            }
+        }
+        .signupContainer {
+            position: absolute;
+            height: 75rem;
+            width: 85rem;
+            background: white;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem;
+            box-sizing: border-box;
+            .rows {
+                position: relative;
+                float: left;
+                height: auto;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 2rem;
+                .infoText {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%);
+                    height: 5rem;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 5rem;
+                    .signIn {
+                        color: #2996cc;
+                        font-weight: 600;
+                    }
+                }
+                .columns {
+                    position: relative;
+                    float: left;
+                    width: 50%;
+                    height: 6rem;
+                    padding: 0px 2rem;
+                    box-sizing: border-box;
+                    .caption {
+                        position: relative;
+                        float: left;
+                        text-align: left;
+                        color: #222e40;
+                        font-weight: 600;
+                        width: 100%;
+                        height: 2rem;
+                        font-size: @h2;
+                        line-height: 2rem;
+                    }
+                    .value {
+                        position: relative;
+                        float: left;
+                        height: 4rem;
+                        line-height: 4rem;
+                        width: 100%;
+                        border: 1px solid lightgray;
+                        border-radius: .4rem;
+                        padding-left: .5rem;
+                        box-sizing: border-box;
+                        margin: .5rem 0 0 0;
+                        &.btnContinue {
+                            color: white;
+                            background: #2996cc;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+                        &.noBorder {
+                            border: none;
+                        }
+                    }
+                }
+                .columns:first-child{
+                    padding-left: 0;
+                }
+                .columns:last-child{
+                    padding-right: 0;
+                }
+            }
+            .rows:first-child {
+                margin-top: 15rem;
+                border-top: 1px solid lightgray;
+                padding-top: 4rem;
+            }
+              .rows:nth-child(2) {
+              
+                border-bottom: 1px solid lightgray;
+                padding-bottom: 4rem;
+            }
+             .rows:nth-child(3) {
+              
+                border-bottom: 1px solid lightgray;
+                padding-bottom: 4rem;
+            }
+        }
+    }

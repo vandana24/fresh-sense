@@ -1,0 +1,55 @@
+html {
+  font-size: 10px;
+  font-family: 'Affogato';
+  font-weight: 300;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+input::-webkit-input-placeholder {
+  font-family: Affogato;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+input[type="text"] {
+  font-family: Affogato;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 5rem;
+}
+input,
+textarea {
+  font-family: Affogato;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slideLeft {
+  left: 0 !important;
+}
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: 'Affogato';
+}

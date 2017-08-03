@@ -1,0 +1,153 @@
+html {
+  font-size: 10px;
+  font-family: 'Affogato';
+  font-weight: 300;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+input::-webkit-input-placeholder {
+  font-family: Affogato;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+input[type="text"] {
+  font-family: Affogato;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 5rem;
+}
+input,
+textarea {
+  font-family: Affogato;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slideLeft {
+  left: 0 !important;
+}
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: 'Affogato';
+}
+.popupScreen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  font-family: sans-serif;
+  display: none;
+}
+.popupScreen .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+.popupScreen .popup {
+  position: absolute;
+  height: 22rem;
+  width: 42rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+  z-index: 5;
+  overflow: hidden;
+}
+.popupScreen .popup .header {
+  position: relative;
+  float: left;
+  height: 6rem;
+  width: 100%;
+  background: #de1f26;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 6rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: white;
+}
+.popupScreen .popup .contentContainer {
+  position: relative;
+  float: left;
+  height: 16rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  color: black;
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-top: none;
+  background: white;
+}
+.popupScreen .popup .contentContainer .text {
+  position: relative;
+  float: left;
+  height: 8rem;
+  width: 100%;
+  padding-top: 2rem;
+  box-sizing: border-box;
+  line-height: 2.5rem;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.popupScreen .popup .contentContainer .confirmButtons {
+  position: relative;
+  float: left;
+  height: 8rem;
+  width: 100%;
+  text-align: center;
+}
+.popupScreen .popup .contentContainer .confirmButtons .btn {
+  position: relative;
+  height: 5rem;
+  width: 15rem;
+  font-size: 1.7rem;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #de1f26;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  line-height: 5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: black;
+}
+.popupScreen .popup .contentContainer .confirmButtons .btn.btnCancel {
+  border: 1px solid grey;
+  font-weight: 400;
+}
+.popupScreen .popup .contentContainer .confirmButtons .btn.btnConfirm {
+  background: #de1f26;
+  border: 1px solid white;
+  color: white;
+}

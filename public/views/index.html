@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width = device-width, initial-scale = 0, user-scalable = no, minimum-scale = 1, maximum-scale = 1">
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="../css/screen.css" rel="stylesheet" type="text/css">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <!--screens css-->
+    <link href="../screens/homeScreen/screen.css" rel="stylesheet" type="text/css">
+    <link href="../screens/itemsScreen/screen.css" rel="stylesheet" type="text/css">
+    <link href="../screens/checkoutScreen/screen.css" rel="stylesheet" type="text/css">
+    <link href="../screens/popup/screen.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="homeScreen">
+            <div class="notifyHeader">Welcome to fresh Sense</div>
+            <div class="header"><input type="text" placeholder="search your favorite item here" class="searchBar"></div>
+            <div class="contentContainer">
+                <div class="offerBlock">
+
+                </div>
+                <div class="categoryContainer">
+
+                </div>
+            </div>
+        </div>
+        <div class="itemsScreen">
+            <div class="leftPanel">
+                <div class="categoryName">FOOD</div>
+            </div>
+            <div class="rightPanel">
+
+            </div>
+            <div class="itemCartContainer">
+                <div class="cartPriceContainer">
+                    <div class="row">
+                        <div class="total subtotal">
+                            <div class="text">Subtotal</div>
+                            <div class="price">
+                                <span class="rs">₹</span>
+                                <span class="value">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="total delivery">
+                            <div class="text">Delivery Charge</div>
+                            <div class="price">
+                                <span class="rs">₹</span>
+                                <span class="value">20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemIntoCart">
+
+                </div>
+                <div class="footer">Proceed To CheckOut</div>
+            </div>
+        </div>
+        <div class="checkoutScreen">
+            <div class="header"><div class="notifyBar"></div></div>
+            <div class="contentContainer">
+                <div class="userDetailsContainer">
+                    <!--mobile number-->
+                    <div class="rows mobile">
+                        <div class="checkCounter">1</div>
+                        <div class="rowHeader">Mobile Number Verification</div>
+                        <div class="caption">Number</div>
+                        <input type="text" maxlength="10" placeholder="enter mobile number" class="value">
+                        <div class="btnSave mobile">Save</div>
+                    </div>
+                    <!--address details-->
+                    <div class="rows address">
+                        <div class="checkCounter">2</div>
+                        <div class="rowHeader">Address Details</div>
+                        <div class="caption">Name</div>
+                        <input type="text" data-id="name" placeholder="First & last Name" class="value">
+                        <div class="caption">Flat/House/Office Number</div>
+                        <input type="text" data-id="house" placeholder="First & last Name" class="value">
+                        <div class="caption">Street/Society/Office Name</div>
+                        <input type="text" data-id="street" placeholder="street address" class="value">
+                        <div class="caption">Area</div>
+                        <input type="text" data-id="area" placeholder="EX-sector-x" class="value">
+
+                        <div class="btnSave address">Save</div>
+                    </div>
+                    <div class="rows placeOrder">
+                        <div class="checkCounter">3</div>
+                        <div class="rowHeader">Payments</div>
+                        <div class="caption">Pay On Delivery
+                        </div>
+                        <div class="btnSave placeOrder">Place Order</div>
+                    </div>
+                </div>
+                <div class="cartItemDetails">
+
+                </div>
+            </div>
+        </div>
+        <div class="popupScreen">
+
+        </div>
+    </div>
+    <script id="itemCategoryTemplate" type="text/x-jquery-tmpl">
+        <div class="caption">categories</div>
+        {{each(v,i) categories}}
+        <div class="categories" data-id="{{html id}}">
+            <div class="icon"><img src="../images/{{html icon}}" alt="" class="iconSrc"></div>
+            <div class="name">{{html name}}</div>
+            <div class="des">{{html des}}
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script id="itemLeftPanelTemplate" type="text/x-jquery-tmpl">
+        <div class="categoryName" data-id="{{html id}}">{{html name}}</div>
+    </script>
+    <script id="itemListTemplate" type="text/x-jquery-tmpl">
+        <div class="itemContainer">
+            <div class="offer"> </div>
+            <div class="itemImage"><img src="../images/{{html icon}}.png" alt="" class="icon"></div>
+            <div class="itemName">{{html name}}</div>
+            <div class="footer">
+                <div class="pricingOption">{{html quantity}} <span class="unit">{{html quantity.split('g')[1]}}</span></div>
+                <div class="price old"><span class="rs">₹</span>{{html price-5}}</div>
+                <div class="price new"><span class="rs">₹</span>{{html price}}</div>
+                <div class="addCart">Add To Cart</div>
+            </div>
+        </div>
+    </script>
+    <script id="itemIntoCartTemplate" type="text/x-jquery-tmpl">
+        <div class="row" data-id="{{html id}}">
+            <div class="itemImage">
+                <img src="../images/{{html icon}} alt=" " class="icon "></div>
+            <div class="updatePrice ">
+                <div class="units ">{{html quantity}}</div>
+                <div class="itemName ">{{html name}}</div>
+                <div class="operation " data-id ="{{html id}}">
+                    <div class="multiplecation ">
+                        <div class="tab minus ">-</div>
+                        <div class="tab unit ">{{html q}}</div>
+                        <div class="tab addition ">+</div>
+                        <div class="tab multi ">*</div>
+                        <div class="tab price "><span class="rs ">₹ </span><span class="value ">{{html price}}</span></div>
+                    </div>
+                    <div class="finalPrice "><span class="rs ">₹ </span><span class="value ">{{html  q*price}}</span></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id ="cartItemBillTemplate" type ="text/x-jquery-tmpl">
+       <div class="total subtotal ">
+                        <div class="text ">Subtotal</div>
+                        <div class="price ">
+                            <span class="rs ">₹</span>
+                            <span class="value ">{{html subtotal}}</span>
+                        </div>
+                    </div>
+                    <div class="total deliveryCharge ">
+                        <div class="text ">Delivery Charge</div>
+                        <div class="price ">
+                            <span class="rs ">+ ₹</span>
+                            <span class="value ">{{html deliveryCharge}}</span>
+                        </div>
+                    </div>
+                    <div class="total cartValue ">
+                        <div class="text ">Amount</div>
+                        <div class="price ">
+                            <span class="rs ">₹</span>
+                            <span class="value ">{{html total}}</span>
+                        </div>
+                        <div class="text subtext ">(incl. of all taxes)</div>
+                    </div>
+    </script>
+    <script id ="popupTemplate" type="text/x-jquery-tmpl">
+     <div class="overlay"></div>
+            <div class="popup">
+                <div class="header"></div>
+                <div class="contentContainer">
+                    <div class="text"></div>
+                    <div class="confirmButtons">
+                        <div class="btn btnCancel">CANCEL</div>
+                        <div class="btn btnConfirm">CONFIRM</div>
+                    </div>
+                </div>
+            </div>
+    </script>
+    <script src="../scripts/jquery.js "></script>
+    <script src="../scripts/transit.js "></script>
+    <script src="../scripts/highcharts.js "></script>
+    <script src="../scripts/jquery.tmpl.min.js "></script>
+    <script src="../scripts/jslinq.js "></script>
+    <script src="../scripts/moment.min.js "></script>
+    <script src="../scripts/superjson.js "></script>
+    <script src="../scripts/tocca.min.js "></script>
+    <!--<script src="../scripts/socket.io.js "></script>-->
+    <script src="../js/base.js "></script>
+    <script src="../js/appConfig.js "></script>
+    <script src="../js/index.js "></script>
+    <!--screens js-->
+    <script src="../screens/homeScreen/data.js "></script>
+    <script src="../screens/homeScreen/screen.js "></script>
+    <script src="../screens/itemsScreen/screen.js "></script>
+    <script src="../screens/checkoutScreen/screen.js "></script>
+     <script src="../screens/popup/screen.js "></script>
+
+
+
+
+</body>
+
+</html>

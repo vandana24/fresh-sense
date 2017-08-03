@@ -1,0 +1,267 @@
+html {
+  font-size: 10px;
+  font-family: 'Affogato';
+  font-weight: 300;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+input::-webkit-input-placeholder {
+  font-family: Affogato;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+input[type="text"] {
+  font-family: Affogato;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 5rem;
+}
+input,
+textarea {
+  font-family: Affogato;
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slideLeft {
+  left: 0 !important;
+}
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Affogato';
+}
+.mainContainer .notify {
+  position: absolute;
+  height: 16rem;
+  width: 22rem;
+  border-radius: .4rem;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 16rem;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: capitalize;
+  display: none;
+}
+.loginScreen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+  left: 100%;
+  font-family: sans-serif;
+}
+.loginScreen .defaultHeader {
+  position: absolute;
+  top: 0;
+  height: 7rem;
+  width: 100%;
+  background: #222e40;
+}
+.loginScreen .defaultHeader .logo {
+  position: absolute;
+  height: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loginScreen .loginContainer {
+  position: absolute;
+  height: 35rem;
+  width: 55rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid lightgray;
+  border-radius: .4rem;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+.loginScreen .loginContainer .header {
+  position: relative;
+  height: 8rem;
+  width: 100%;
+}
+.loginScreen .loginContainer .header .logo {
+  position: absolute;
+  height: 4rem;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.loginScreen .loginContainer .value {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 1rem 0 0 0;
+  border-radius: .4rem;
+  border: 1px solid lightgray;
+  height: 4rem;
+  box-sizing: border-box;
+  padding: 0 0 0 1rem;
+  color: #222e40;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.loginScreen .loginContainer .value.email {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.loginScreen .loginContainer .value.password {
+  margin: 0 0 0 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.loginScreen .loginContainer .value ::-webkit-input-placeholder {
+  font-size: 1.4rem;
+}
+.loginScreen .loginContainer .btnLogin {
+  position: relative;
+  float: left;
+  margin: 1.5rem 0 0 0;
+  width: 100%;
+  text-align: center;
+  line-height: 4rem;
+  height: 4rem;
+  color: white;
+  font-weight: 600;
+  background: #2996cc;
+  text-transform: capitalize;
+  border-radius: 0.4rem;
+}
+.loginScreen .info {
+  position: absolute;
+  top: 27rem;
+  bottom: 0;
+  text-align: center;
+  line-height: 7rem;
+  color: #58595b;
+  left: 0;
+  right: 0;
+}
+.loginScreen .info .btnSignup {
+  color: #2996cc;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.loginScreen .signupContainer {
+  position: absolute;
+  height: 75rem;
+  width: 85rem;
+  background: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.loginScreen .signupContainer .rows {
+  position: relative;
+  float: left;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+.loginScreen .signupContainer .rows .infoText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+}
+.loginScreen .signupContainer .rows .infoText .signIn {
+  color: #2996cc;
+  font-weight: 600;
+}
+.loginScreen .signupContainer .rows .columns {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 6rem;
+  padding: 0px 2rem;
+  box-sizing: border-box;
+}
+.loginScreen .signupContainer .rows .columns .caption {
+  position: relative;
+  float: left;
+  text-align: left;
+  color: #222e40;
+  font-weight: 600;
+  width: 100%;
+  height: 2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.loginScreen .signupContainer .rows .columns .value {
+  position: relative;
+  float: left;
+  height: 4rem;
+  line-height: 4rem;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: .4rem;
+  padding-left: .5rem;
+  box-sizing: border-box;
+  margin: .5rem 0 0 0;
+}
+.loginScreen .signupContainer .rows .columns .value.btnContinue {
+  color: white;
+  background: #2996cc;
+  text-align: center;
+  font-weight: 600;
+}
+.loginScreen .signupContainer .rows .columns .value.noBorder {
+  border: none;
+}
+.loginScreen .signupContainer .rows .columns:first-child {
+  padding-left: 0;
+}
+.loginScreen .signupContainer .rows .columns:last-child {
+  padding-right: 0;
+}
+.loginScreen .signupContainer .rows:first-child {
+  margin-top: 15rem;
+  border-top: 1px solid lightgray;
+  padding-top: 4rem;
+}
+.loginScreen .signupContainer .rows:nth-child(2) {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 4rem;
+}
+.loginScreen .signupContainer .rows:nth-child(3) {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 4rem;
+}

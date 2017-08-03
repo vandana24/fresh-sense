@@ -1,0 +1,100 @@
+@import '../../css/index.less';
+.popupScreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: @white;
+    font-family: sans-serif;
+    display: none;
+    .overlay {
+        // display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+    }
+    .popup {
+        position: absolute;
+        height: 22rem;
+        width: 42rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // background: yellow;
+        box-sizing: border-box;
+        border-radius: 0.8rem;
+        z-index: 5;
+        overflow: hidden;
+        .header {
+            position: relative;
+            float: left;
+            height: 6rem;
+            width: 100%;
+            background: #de1f26;
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 6rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: white;
+        }
+        .contentContainer {
+            position: relative;
+            float: left;
+            height: 16rem;
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            color: black;
+            box-sizing: border-box;
+            border: 1px solid white;
+            border-top: none;
+            background: white;
+            .text {
+                position: relative;
+                float: left;
+                height: 8rem;
+                width: 100%;
+                padding-top: 2rem;
+                box-sizing: border-box;
+                line-height: 2.5rem;
+                color: black;
+                font-weight: 600;
+                font-size: 2rem;
+            }
+            .confirmButtons {
+                position: relative;
+                float: left;
+                height: 8rem;
+                width: 100%;
+                text-align: center;
+                .btn {
+                    position: relative; // float: left;
+                    height: 5rem;
+                    width: 15rem;
+                    font-size: 1.7rem;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    border: 1px solid #de1f26;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                    line-height: 5rem;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    color: black; // margin-top: 1rem;
+                    &.btnCancel {
+                        border: 1px solid grey;
+                        font-weight: 400;
+                    }
+                    &.btnConfirm {
+                        background: #de1f26;
+                        border: 1px solid white;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

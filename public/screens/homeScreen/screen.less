@@ -1,0 +1,114 @@
+    //out: screen.css
+    @import '../../css/index.less';
+    .homeScreen {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        .notifyHeader {
+            position: absolute;
+            height: 3rem;
+            width: 100%;
+            line-height: 3rem;
+            background: #51aa1b;
+            text-align: center;
+            color: white; 
+        }
+        .header {
+            position: absolute;
+            top: 3rem;
+            height: 7rem;
+            line-height: 7rem;
+            background: #222e40;
+            width: 100%;
+            .searchBar {
+                position: absolute;
+                width: 65%;
+                left: 50%;
+                border: 1px solid lightgray;
+                border-radius: .4rem;
+                height: 4.5rem;
+                top: 1.3rem;
+                padding-left: 4.5rem;
+                box-sizing: border-box;
+                line-height: 5rem;
+                transform: translate(-50%);
+            }
+        }
+        .contentContainer {
+            position: absolute;
+            bottom: 0;
+            top: 10rem;
+            width: 100%;
+            background: white;
+            padding: 2% 20% 0 20%;
+            overflow: auto;
+            box-sizing: border-box;
+            .offerBlock {
+                position: relative;
+                float: left;
+                width: 100%;
+                height: 30rem;
+                margin: 2rem 0 0 0;
+                background: red;
+            }
+            .categoryContainer {
+                position: relative;
+                float: left;
+                width: 100%;
+                height: auto;
+                font-weight: 400;
+                .caption {
+                    position: relative;
+                    float: left;
+                    height: 5rem;
+                    width: 100%;
+                    line-height: 5rem;
+                    padding-left: .5rem;
+                    box-sizing: border-box;
+                    text-transform: capitalize;
+                }
+                .categories {
+                    position: relative;
+                    float: left;
+                    margin: .5rem;
+                    height: 35rem;
+                    width: 23.9%;
+                    padding: .5rem;
+                    box-sizing: border-box;
+                    border: 1px solid #222e40;
+                    .icon {
+                        position: relative;
+                        float: left;
+                        height: 20rem;
+                        width: 100%;
+                        text-align: center;
+                        line-height: 20rem;
+                    }
+                    .name {
+                        position: relative;
+                        float: left;
+                        height: 5rem;
+                        width: 100%;
+                        line-height: 5rem;
+                        padding-left: .5rem;
+                        box-sizing: border-box;
+                        text-transform: capitalize;
+                        border-bottom: 1px solid lightgray;
+                        border-top: 1px solid lightgray;
+
+                    }
+                    .des {
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        box-sizing: border-box;
+                        height: 10rem;
+                       text-transform: capitalize;
+                        padding: .5rem;
+                        box-sizing: border-box;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
