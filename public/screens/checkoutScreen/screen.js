@@ -71,6 +71,8 @@ var checkout = new function () {
                                 execute('saveOrder', makebill).then(function (r) {
                                     console.log(r + '--------save bill ----');
                                     notify('your order has been placed');
+                                    $('.checkoutScreen').hide();
+                                    $('.itemsScreen').hide();
                                     homeScreen.show({});
 
                                 })
