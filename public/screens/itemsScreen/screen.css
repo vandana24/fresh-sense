@@ -53,6 +53,23 @@ body {
   width: 100%;
   font-family: 'Affogato';
 }
+.mainContainer .notifyBar {
+  position: absolute;
+  top: 0;
+  height: 7rem;
+  background: #de1f26;
+  color: white;
+  text-align: center;
+  width: 50%;
+  left: 50%;
+  line-height: 7rem;
+  display: none;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: .4rem;
+  z-index: 10;
+  transform: translate(-50%);
+}
 .itemsScreen {
   position: absolute;
   bottom: 0;
@@ -119,7 +136,10 @@ body {
   position: absolute;
   height: 15rem;
   width: 100%;
-  background: blue;
+  text-align: center;
+}
+.itemsScreen .rightPanel .itemContainer .itemImage .icon {
+  height: 16.8rem;
 }
 .itemsScreen .rightPanel .itemContainer .itemName {
   position: absolute;
@@ -260,7 +280,7 @@ body {
 .itemsScreen .itemCartContainer .row .updatePrice .units {
   position: absolute;
   top: 0.2rem;
-  width: 3rem;
+  width: auto;
   right: 1rem;
   text-align: center;
   font-size: 1.2rem;
@@ -302,11 +322,13 @@ body {
   background: red;
   text-align: center;
   border-radius: 50%;
+  color: white;
 }
 .itemsScreen .itemCartContainer .row .updatePrice .operation .multiplecation .tab.addition {
   background: red;
   text-align: center;
   border-radius: 50%;
+  color: white;
 }
 .itemsScreen .itemCartContainer .row .updatePrice .operation .multiplecation .tab.price {
   width: 7rem;

@@ -1,11 +1,15 @@
 var popupScreen = new function () {
-    this.show = async(req) => {
-        var name = 'popupScreen'
-        screens.show(name);
-        var ref = JSON.parse(JSON.stringify(req));
-        const result = await this.setupScreen(ref);
-        screens.hide(name);
-        return result;
+    this.show =  function (req) {
+        return new Promise(function (resolve, reject) {
+            var name = 'popupScreen'
+            screens.show(name);
+            var ref = JSON.parse(JSON.stringify(req));
+            popupScreen.setupScreen(ref).then(function (r) {
+                screens.hide(name);
+                resolve(r);
+            });
+        })
+
     }
     this.setupScreen = function (ref) {
         return new Promise(function (res, rej) {

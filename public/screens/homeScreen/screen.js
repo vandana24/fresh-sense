@@ -20,6 +20,25 @@ var homeScreen = new function () {
                 });
                 itemsScreen.show(selectCategory);
             });
+            beginSlideShow();
+            searchItem();
         });
+    }
+}
+
+function beginSlideShow() {
+    var images = new Array('../images/icon-breakfast.jpg', '../images/icon-bread.jpg', '../images/icon-chocolate.jpg');
+    var nextimage = 0;
+    doSlideshow();
+
+    function doSlideshow() {
+        if (nextimage >= images.length) {
+            nextimage = 0;
+        }
+        $('.homeScreen .offerBlock')
+            .css('background-image', 'url("' + images[nextimage++] + '")')
+            .fadeIn(500, function () {
+                setTimeout(doSlideshow, 3000);
+            });
     }
 }

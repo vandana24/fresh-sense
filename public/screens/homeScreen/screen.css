@@ -53,6 +53,23 @@ body {
   width: 100%;
   font-family: 'Affogato';
 }
+.mainContainer .notifyBar {
+  position: absolute;
+  top: 0;
+  height: 7rem;
+  background: #de1f26;
+  color: white;
+  text-align: center;
+  width: 50%;
+  left: 50%;
+  line-height: 7rem;
+  display: none;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: .4rem;
+  z-index: 10;
+  transform: translate(-50%);
+}
 .homeScreen {
   position: absolute;
   height: 100%;
@@ -104,7 +121,7 @@ body {
   width: 100%;
   height: 30rem;
   margin: 2rem 0 0 0;
-  background: red;
+  background-size: cover;
 }
 .homeScreen .contentContainer .categoryContainer {
   position: relative;

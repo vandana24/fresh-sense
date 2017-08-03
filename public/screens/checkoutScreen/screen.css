@@ -53,6 +53,23 @@ body {
   width: 100%;
   font-family: 'Affogato';
 }
+.mainContainer .notifyBar {
+  position: absolute;
+  top: 0;
+  height: 7rem;
+  background: #de1f26;
+  color: white;
+  text-align: center;
+  width: 50%;
+  left: 50%;
+  line-height: 7rem;
+  display: none;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: .4rem;
+  z-index: 10;
+  transform: translate(-50%);
+}
 input::placholder {
   font-size: 2rem;
   width: 100%;
@@ -70,21 +87,11 @@ input::placholder {
   width: 100%;
   background: gray;
 }
-.checkoutScreen .header .notifyBar {
+.checkoutScreen .header .iconBack {
   position: absolute;
-  top: 0;
-  height: 7rem;
-  background: #de1f26;
-  color: white;
-  text-align: center;
-  width: 50%;
-  left: 50%;
-  line-height: 7rem;
-  display: none;
-  font-size: 2rem;
-  font-weight: bold;
-  border-radius: .4rem;
-  transform: translate(-50%);
+  height: 4rem;
+  top: 3rem;
+  left: 7rem;
 }
 .checkoutScreen .contentContainer {
   position: absolute;

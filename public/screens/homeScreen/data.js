@@ -129,7 +129,7 @@ var items = [{
         c1: 'fv',
         price: 145,
         quantity: '500g',
-        icon: 'icon-fuzi apple.png',
+        icon: 'icon-fuji apple',
         isActive: true,
         des: '',
         o: 1
@@ -220,7 +220,7 @@ var items = [{
         c1: 'fv',
         price: 105,
         quantity: '500g',
-        icon: 'icon- green kiwi ',
+        icon: 'icon green kiwi',
         isActive: true,
         des: '',
         o: 9
@@ -1013,7 +1013,7 @@ var items = [{
         c1: 'gs',
         price: 55,
         quantity: '200g',
-        icon: 'icon aashirwad aata',
+        icon: 'icon-catch-red-chilli-powder',
         isActive: true,
         des: '',
         o: 87
@@ -1112,7 +1112,7 @@ var items = [{
         c1: 'bd',
         price: 125,
         quantity: '300g',
-        icon: 'icon kallog"s corn flex',
+        icon: 'icon kallogs corn flex',
         isActive: true,
         des: '',
         o: 96
@@ -1299,7 +1299,7 @@ var items = [{
         c1: 'pc',
         price: 79,
         quantity: '100ml',
-        icon: 'icon bajaj hair oil',
+        icon: 'icon-bajaj-hair-oil',
         isActive: true,
         des: '',
         o: 113
@@ -1321,7 +1321,7 @@ var items = [{
         c1: 'pc',
         price: 52,
         quantity: '75ml',
-        icon: 'icon hair oil',
+        icon: 'icon-clear-oil',
         isActive: true,
         des: '',
         o: 115
@@ -1343,7 +1343,7 @@ var items = [{
         c1: 'pc',
         price: 60,
         quantity: '250g',
-        icon: 'icon-dabar gulabari rosewater ',
+        icon: 'icon-dabar gulabari rosewater',
         isActive: true,
         des: '',
         o: 117
@@ -1354,7 +1354,7 @@ var items = [{
         c1: 'pc',
         price: 203,
         quantity: '418g',
-        icon: 'icon-gillete foam ',
+        icon: 'icon-gillete foam',
         isActive: true,
         des: '',
         o: 118
@@ -1365,7 +1365,7 @@ var items = [{
         c1: 'ic',
         price: 149,
         quantity: '125ml',
-        icon: 'icon-hug chocolate hazelnut-frozen yogurt ',
+        icon: 'icon-hug chocolate hazelnut-frozen yogurt',
         isActive: true,
         des: '',
         o: 119
@@ -1420,7 +1420,7 @@ var items = [{
         c1: 'ic',
         price: 149,
         quantity: '125ml',
-        icon: ' icon-hug strawberry-frozen yogurt',
+        icon: 'icon-hug strawberry-frozen yogurt',
         isActive: true,
         des: '',
         o: 124
@@ -1442,7 +1442,7 @@ var items = [{
         c1: 'sjc',
         price: 55,
         quantity: '100g',
-        icon: 'icon-dabur honey',
+        icon: 'icon-dabur-honey',
         isActive: true,
         des: '',
         o: 126
@@ -1926,7 +1926,7 @@ var items = [{
         c1: 'baby',
         price: 85,
         quantity: '100ml',
-        icon: 'icon-patanjali shishu care ',
+        icon: 'icon-patanjali shishu care',
         isActive: true,
         des: '',
         o: 170
@@ -1981,21 +1981,10 @@ var items = [{
         c1: 'pet',
         price: 1591,
         quantity: '10kg',
-        icon: 'icon-pedigree puppy  food',
+        icon: 'icon-pedigree puppy food',
         isActive: true,
         des: '',
         o: 175
-    },
-    {
-        name: 'pedigree dry dog food',
-        id: 'pmb',
-        c1: 'pet',
-        price: 1473,
-        quantity: '10kg',
-        icon: 'icon-pedigree dry dog food',
-        isActive: true,
-        des: '',
-        o: 176
     },
     {
         name: 'pedigree dog feeding bowl',
@@ -2091,7 +2080,7 @@ var items = [{
         c1: 'ms',
         price: 136,
         quantity: '500g',
-        icon: 'icon- boneless chicken',
+        icon: 'icon boneless chicken',
         isActive: true,
         des: '',
         o: 185
@@ -2124,7 +2113,7 @@ var items = [{
         c1: 'ms',
         price: 282,
         quantity: '1kg',
-        icon: 'icon-lollipop chicken ',
+        icon: 'icon-lollipop chicken',
         isActive: true,
         des: '',
         o: 188
@@ -2135,7 +2124,7 @@ var items = [{
         c1: 'ms',
         price: 258,
         quantity: '1kg',
-        icon: 'icon-drumstic chicken ',
+        icon: 'icon-drumstic chicken',
         isActive: true,
         des: '',
         o: 189
@@ -2146,7 +2135,7 @@ var items = [{
         c1: 'ms',
         price: 370,
         quantity: '1kg',
-        icon: 'icon-rohu fish ',
+        icon: 'icon-rohu fish',
         isActive: true,
         des: '',
         o: 190
@@ -2157,7 +2146,7 @@ var items = [{
         c1: 'ms',
         price: 310,
         quantity: '500g',
-        icon: 'icon-salami chicken ',
+        icon: 'icon-salami chicken',
         isActive: true,
         des: '',
         o: 191
@@ -2190,4 +2179,6 @@ items.forEach(function (v, i) {
     v.subtotal = 0;
     v.total = 0;
     v.deliveryCharge = 20;
+    v.discount = 5;
+    v.icon = v.icon.replace(/\s/g,'-')
 });

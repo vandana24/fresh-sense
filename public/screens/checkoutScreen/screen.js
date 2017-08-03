@@ -1,11 +1,8 @@
 var checkout = new function () {
-    var makebill = {
-        time: new Date().getTime(),
-        nDay: parseInt(moment().format('YYYYMMDD')),
-        billNumber: '',
-        subtotal: 0,
-        total: 0,
-        deliveryCharge: 0
+
+    var vali = {
+        mobile: false,
+        address: false
     };
     this.show = async function (req) {
         var name = 'checkoutScreen';
@@ -19,22 +16,30 @@ var checkout = new function () {
     this.setupScreen = function (ref) {
 
         return new Promise(function (resolve, reject) {
+            var makebill = {
+                time: new Date().getTime(),
+                nDay: parseInt(moment().format('YYYYMMDD')),
+                billNumber: '',
+                subtotal: 0,
+                total: 0,
+                deliveryCharge: 0
+            };
             ref.forEach(function (v, i) {
                 makebill.total += v.total;
                 makebill.subtotal += v.subtotal;
                 makebill.deliveryCharge = 20;
 
             })
-            makebill.total +=makebill.deliveryCharge;
+            makebill.total += makebill.deliveryCharge;
             render('.checkoutScreen .cartItemDetails', 'cartItemBill', makebill, function () {
                 bind('.btnSave.mobile', function () {
                     makebill.mobile = $('.rows.mobile .value').val();
                     if (screens.isNumeric(makebill.mobile)) {
                         notify('thanks for update your mobile number');
+                        vali.mobile = true;
                     } else {
                         notify('mobile number must be a numeric value');
                     }
-
 
                 });
 
@@ -52,29 +57,31 @@ var checkout = new function () {
                             makebill[$(this).attr('data-id')] = $(this).val();
                         });
                         notify('we will reach you soon');
+                        vali.address = true;
                     }
                 });
                 bind('.btnSave.placeOrder', function () {
-                    makebill.items = JSON.parse(JSON.stringify(ref));
-                    makebill.billNumber = 'FS' + parseInt(Math.random() * 1000);
-                    popupScreen.show({
-                        text: 'confirm your order ?'
-                    }).then(function (r) {
-                        if (r)
-                            execute('saveOrder', makebill).then(function (r) {
-                                console.log(r + '--------save bill ----');
-                                notify('your order has been placed');
-                                setTimeout(function () {
-                                    popupScreen.show({
-                                        text: 'thankyou for your order\n'
-                                    }).then(function (r) {
-                                        homeScreen.show({});
-                                    });
-                                }, 2000)
+                    if (vali.mobile && vali.address) {
+                        makebill.items = JSON.parse(JSON.stringify(ref));
+                        makebill.billNumber = 'FS' + parseInt(Math.random() * 1000);
+                        popupScreen.show({
+                            text: 'confirm your order ?'
+                        }).then(function (r) {
+                            if (r)
+                                execute('saveOrder', makebill).then(function (r) {
+                                    console.log(r + '--------save bill ----');
+                                    notify('your order has been placed');
+                                    homeScreen.show({});
 
-                            })
-                    })
+                                })
+                        })
+                    } else {
+                        notify('we would like to know your delivery place');
+                    }
                 });
+                bind('.header .iconBack', function () {
+                    $('.checkoutScreen').hide();
+                })
             });
 
         });

@@ -23,6 +23,7 @@
 
 <body>
     <div class="mainContainer">
+        <div class="notifyBar"></div>
         <div class="homeScreen">
             <div class="notifyHeader">Welcome to fresh Sense</div>
             <div class="header"><input type="text" placeholder="search your favorite item here" class="searchBar"></div>
@@ -70,7 +71,9 @@
             </div>
         </div>
         <div class="checkoutScreen">
-            <div class="header"><div class="notifyBar"></div></div>
+            <div class="header">
+                <img src="../images/icon-left-white.png" alt="" class="iconBack">
+                <div class="notifyBar"></div></div>
             <div class="contentContainer">
                 <div class="userDetailsContainer">
                     <!--mobile number-->
@@ -130,12 +133,12 @@
     <script id="itemListTemplate" type="text/x-jquery-tmpl">
         <div class="itemContainer">
             <div class="offer"> </div>
-            <div class="itemImage"><img src="../images/{{html icon}}.png" alt="" class="icon"></div>
+            <div class="itemImage"><img src="../images/{{html icon}}.jpg" alt="" class="icon"></div>
             <div class="itemName">{{html name}}</div>
             <div class="footer">
                 <div class="pricingOption">{{html quantity}} <span class="unit">{{html quantity.split('g')[1]}}</span></div>
-                <div class="price old"><span class="rs">₹</span>{{html price-5}}</div>
-                <div class="price new"><span class="rs">₹</span>{{html price}}</div>
+                <div class="price old"><span class="rs">₹</span>{{html price}}</div>
+                <div class="price new"><span class="rs">₹</span>{{html price-5}}</div>
                 <div class="addCart">Add To Cart</div>
             </div>
         </div>
@@ -143,7 +146,7 @@
     <script id="itemIntoCartTemplate" type="text/x-jquery-tmpl">
         <div class="row" data-id="{{html id}}">
             <div class="itemImage">
-                <img src="../images/{{html icon}} alt=" " class="icon "></div>
+                <img src="../images/{{html icon}}.jpg" alt=" " class="icon "></div>
             <div class="updatePrice ">
                 <div class="units ">{{html quantity}}</div>
                 <div class="itemName ">{{html name}}</div>
@@ -153,9 +156,9 @@
                         <div class="tab unit ">{{html q}}</div>
                         <div class="tab addition ">+</div>
                         <div class="tab multi ">*</div>
-                        <div class="tab price "><span class="rs ">₹ </span><span class="value ">{{html price}}</span></div>
+                        <div class="tab price "><span class="rs ">₹ </span><span class="value ">{{html price - discount}}</span></div>
                     </div>
-                    <div class="finalPrice "><span class="rs ">₹ </span><span class="value ">{{html  q*price}}</span></div>
+                    <div class="finalPrice "><span class="rs ">₹ </span><span class="value ">{{html  q*(price - discount)}}</span></div>
                 </div>
             </div>
         </div>
@@ -191,9 +194,9 @@
                 <div class="contentContainer">
                     <div class="text"></div>
                     <div class="confirmButtons">
-                        <div class="btn btnCancel">CANCEL</div>
-                        <div class="btn btnConfirm">CONFIRM</div>
-                    </div>
+                        <div class="btn btnCancel" data-id="cancel">CANCEL</div>
+                        <div class="btn btnConfirm" data-id="confirm">CONFIRM</div>
+                    </div> 
                 </div>
             </div>
     </script>
