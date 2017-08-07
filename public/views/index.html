@@ -26,7 +26,8 @@
         <div class="notifyBar"></div>
         <div class="homeScreen">
             <div class="notifyHeader">Welcome to fresh Sense</div>
-            <div class="header"><input type="text" placeholder="search your favorite item here" class="searchBar"></div>
+            <div class="header"><img src="../images/logoSmall.png" alt="" class="logo"><input type="text" placeholder="search your favorite item here"
+                    class="searchBar"></div>
             <div class="contentContainer">
                 <div class="offerBlock">
 
@@ -73,7 +74,8 @@
         <div class="checkoutScreen">
             <div class="header">
                 <img src="../images/icon-left-white.png" alt="" class="iconBack">
-                <div class="notifyBar"></div></div>
+                <div class="notifyBar"></div>
+            </div>
             <div class="contentContainer">
                 <div class="userDetailsContainer">
                     <!--mobile number-->
@@ -150,7 +152,7 @@
             <div class="updatePrice ">
                 <div class="units ">{{html quantity}}</div>
                 <div class="itemName ">{{html name}}</div>
-                <div class="operation " data-id ="{{html id}}">
+                <div class="operation " data-id="{{html id}}">
                     <div class="multiplecation ">
                         <div class="tab minus ">-</div>
                         <div class="tab unit ">{{html q}}</div>
@@ -163,42 +165,42 @@
             </div>
         </div>
     </script>
-    <script id ="cartItemBillTemplate" type ="text/x-jquery-tmpl">
-       <div class="total subtotal ">
-                        <div class="text ">Subtotal</div>
-                        <div class="price ">
-                            <span class="rs ">₹</span>
-                            <span class="value ">{{html subtotal}}</span>
-                        </div>
-                    </div>
-                    <div class="total deliveryCharge ">
-                        <div class="text ">Delivery Charge</div>
-                        <div class="price ">
-                            <span class="rs ">+ ₹</span>
-                            <span class="value ">{{html deliveryCharge}}</span>
-                        </div>
-                    </div>
-                    <div class="total cartValue ">
-                        <div class="text ">Amount</div>
-                        <div class="price ">
-                            <span class="rs ">₹</span>
-                            <span class="value ">{{html total}}</span>
-                        </div>
-                        <div class="text subtext ">(incl. of all taxes)</div>
-                    </div>
+    <script id="cartItemBillTemplate" type="text/x-jquery-tmpl">
+        <div class="total subtotal ">
+            <div class="text ">Subtotal</div>
+            <div class="price ">
+                <span class="rs ">₹</span>
+                <span class="value ">{{html subtotal}}</span>
+            </div>
+        </div>
+        <div class="total deliveryCharge ">
+            <div class="text ">Delivery Charge</div>
+            <div class="price ">
+                <span class="rs ">+ ₹</span>
+                <span class="value ">{{html deliveryCharge}}</span>
+            </div>
+        </div>
+        <div class="total cartValue ">
+            <div class="text ">Amount</div>
+            <div class="price ">
+                <span class="rs ">₹</span>
+                <span class="value ">{{html total}}</span>
+            </div>
+            <div class="text subtext ">(incl. of all taxes)</div>
+        </div>
     </script>
-    <script id ="popupTemplate" type="text/x-jquery-tmpl">
-     <div class="overlay"></div>
-            <div class="popup">
-                <div class="header"></div>
-                <div class="contentContainer">
-                    <div class="text"></div>
-                    <div class="confirmButtons">
-                        <div class="btn btnCancel" data-id="cancel">CANCEL</div>
-                        <div class="btn btnConfirm" data-id="confirm">CONFIRM</div>
-                    </div> 
+    <script id="popupTemplate" type="text/x-jquery-tmpl">
+        <div class="overlay"></div>
+        <div class="popup">
+            <div class="header"></div>
+            <div class="contentContainer">
+                <div class="text"></div>
+                <div class="confirmButtons">
+                    <div class="btn btnCancel" data-id="cancel">CANCEL</div>
+                    <div class="btn btnConfirm" data-id="confirm">CONFIRM</div>
                 </div>
             </div>
+        </div>
     </script>
     <script src="../scripts/jquery.js "></script>
     <script src="../scripts/transit.js "></script>
@@ -217,7 +219,7 @@
     <script src="../screens/homeScreen/screen.js "></script>
     <script src="../screens/itemsScreen/screen.js "></script>
     <script src="../screens/checkoutScreen/screen.js "></script>
-     <script src="../screens/popup/screen.js "></script>
+    <script src="../screens/popup/screen.js "></script>
 
 
 

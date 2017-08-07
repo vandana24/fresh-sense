@@ -92,6 +92,11 @@ body {
   background: #222e40;
   width: 100%;
 }
+.homeScreen .header .logo {
+  position: absolute;
+  left: 1rem;
+  height: 7.2rem;
+}
 .homeScreen .header .searchBar {
   position: absolute;
   width: 65%;
