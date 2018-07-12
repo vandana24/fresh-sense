@@ -1,7 +1,7 @@
 var homeScreen = new function () {
     this.show = async(req) => {
         var name = 'homeScreen';
-        screens.show(name);
+       screens.show(name);
         var ref = JSON.parse(JSON.stringify(req));
         const result = await this.setupScreen(ref);
         screens.hide(name);

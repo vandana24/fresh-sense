@@ -70,6 +70,10 @@ body {
   z-index: 10;
   transform: translate(-50%);
 }
+body {
+  padding: 0;
+  margin: 0;
+}
 .homeScreen {
   position: absolute;
   height: 100%;
@@ -115,7 +119,7 @@ body {
   bottom: 0;
   top: 10rem;
   width: 100%;
-  background: white;
+  background-color: white;
   padding: 2% 20% 0 20%;
   overflow: auto;
   box-sizing: border-box;
